@@ -34,8 +34,6 @@ class SideNav extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: const Row(
         children: [
-          FlutterLogo(size: 32),
-          SizedBox(width: 12),
           Text(
             'Admin Panel',
             style: TextStyle(
@@ -55,36 +53,43 @@ class SideNav extends StatelessWidget {
       children: [
         NavItem(
           icon: Icons.dashboard_outlined,
-          label: 'Dashboard',
+          label: '仪表盘',
           navItem: NavItemEnum.dashboard,
           selectedItem: selectedItem,
           onSelected: onNavItemSelected,
         ),
         NavItem(
           icon: Icons.analytics_outlined,
-          label: 'Analytics',
+          label: '数据分析',
           navItem: NavItemEnum.analytics,
           selectedItem: selectedItem,
           onSelected: onNavItemSelected,
         ),
         NavItem(
           icon: Icons.people_outline,
-          label: 'Users',
+          label: '用户管理',
           navItem: NavItemEnum.users,
           selectedItem: selectedItem,
           onSelected: onNavItemSelected,
         ),
         NavItem(
           icon: Icons.inventory_2_outlined,
-          label: 'Products',
+          label: '产品管理',
           navItem: NavItemEnum.products,
+          selectedItem: selectedItem,
+          onSelected: onNavItemSelected,
+        ),
+        NavItem(
+          icon: Icons.image_outlined,
+          label: '图片上传',
+          navItem: NavItemEnum.images,
           selectedItem: selectedItem,
           onSelected: onNavItemSelected,
         ),
         const Divider(color: Colors.white24),
         NavItem(
           icon: Icons.settings_outlined,
-          label: 'Settings',
+          label: '系统设置',
           navItem: NavItemEnum.settings,
           selectedItem: selectedItem,
           onSelected: onNavItemSelected,

@@ -3,5 +3,6 @@ enum NavItemEnum {
   analytics,
   users,
   products,
+  images,
   settings,
 }

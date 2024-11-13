@@ -1,6 +1,7 @@
 import 'package:admin_dashboard/pages/analytics/analytics_page.dart';
 import 'package:admin_dashboard/pages/home/details_page.dart';
 import 'package:admin_dashboard/pages/home/home_page.dart';
+import 'package:admin_dashboard/pages/images/images_page.dart';
 import 'package:admin_dashboard/pages/login/login_page.dart';
 import 'package:admin_dashboard/pages/profile/profile_page.dart';
 import 'package:admin_dashboard/pages/products/products_page.dart';
@@ -75,6 +76,15 @@ class AppRouter {
             builder: (context, state) => const SettingsPage(),
             redirect: (context, state) {
               TitleManager.updateTitle('/settings');
+              return null;
+            },
+          ),
+          GoRoute(
+            path: '/images',
+            name: 'images',
+            builder: (context, state) => const ImagesPage(),
+            redirect: (context, state) {
+              TitleManager.updateTitle('/images');
               return null;
             },
           ),

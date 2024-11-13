@@ -11,6 +11,7 @@ class TitleManager {
     '/settings': '系统设置 - 管理系统',
     '/profile': '个人资料 - 管理系统',
     '/login': '登录 - 管理系统',
+    '/images': '图片上传 - 管理系统',
   };
 
   // 更新标题的方法

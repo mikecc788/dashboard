@@ -39,6 +39,9 @@ class _HomePageState extends State<HomePage> {
       case NavItemEnum.settings:
         context.goNamed('settings');
         break;
+      case NavItemEnum.images:
+        context.goNamed('images');
+        break;
     }
   }
 
