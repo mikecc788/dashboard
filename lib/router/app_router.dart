@@ -6,6 +6,7 @@ import 'package:admin_dashboard/pages/profile/profile_page.dart';
 import 'package:admin_dashboard/pages/products/products_page.dart';
 import 'package:admin_dashboard/pages/settings/settings_page.dart';
 import 'package:admin_dashboard/pages/users/users_page.dart';
+import 'package:admin_dashboard/utils/title_manager.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -26,6 +27,10 @@ class AppRouter {
               final id = state.pathParameters['id'];
               return DetailsPage(id: id);
             },
+            redirect: (context, state) {
+              TitleManager.updateTitle('/details');
+              return null;
+            },
           ),
           GoRoute(
             path: '/profile',
@@ -41,21 +46,37 @@ class AppRouter {
             path: '/analytics',
             name: 'analytics',
             builder: (context, state) => const AnalyticsPage(),
+            redirect: (context, state) {
+              TitleManager.updateTitle('/analytics');
+              return null;
+            },
           ),
           GoRoute(
             path: '/users',
             name: 'users',
             builder: (context, state) => const UsersPage(),
+            redirect: (context, state) {
+              TitleManager.updateTitle('/users');
+              return null;
+            },
           ),
           GoRoute(
             path: '/products',
             name: 'products',
             builder: (context, state) => const ProductsPage(),
+            redirect: (context, state) {
+              TitleManager.updateTitle('/products');
+              return null;
+            },
           ),
           GoRoute(
             path: '/settings',
             name: 'settings',
             builder: (context, state) => const SettingsPage(),
+            redirect: (context, state) {
+              TitleManager.updateTitle('/settings');
+              return null;
+            },
           ),
         ]);
 
